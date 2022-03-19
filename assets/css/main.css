@@ -156,7 +156,9 @@ input, select, textarea {
 
 	h3 {
 		font-size: 1.35em;
+		font-weight: 500;
 		line-height: 1.5em;
+		color: #235ba0;
 	}
 
 	h4 {
@@ -2638,14 +2640,15 @@ input, select, textarea {
 
 		table td {
 			padding: 0.75em 0.75em;
+			text-align:justify
 		}
 
 		table th {
-			color: #555;
-			font-size: 0.9em;
+			color: rgb(7, 35, 94);
+			font-size: 1em;
 			font-weight: 400;
 			padding: 0 0.75em 0.75em 0.75em;
-			text-align: left;
+			text-align: center;
 		}
 
 		table thead {
