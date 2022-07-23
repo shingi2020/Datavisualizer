@@ -26,8 +26,8 @@
 			<section id="header">
 				<header>
 					<span class="image avatar"><a href="Blog.html"><img src="images/avatar2.png" alt="blog articles" /></a></span>
-					<h1 id="logo"><a href="#">The Data Professional</a></h1>
-					<p>Unit 7: Data Collection Using Python<br />
+					<h1 id="logo"><a href="#">Numerical Analysis</a></h1>
+					<p>Unit 1: R and R Studio Basics <br />
 					</p>
 				</header>
 				<nav id="nav">
@@ -63,11 +63,11 @@
 								<div class="container">
 									<header class="major">
 										<h2>Summary</h2>
-										<p>Workshop on Data Collection Using Python<br />
+										<p>Crime Survey for England and Wales<br />
 										</p>
 									</header>
 									<p>
-										The unit focused on methods of retrieving data from various sources to build datasets that can be used in analysis and overall contribution to business decision-making. 
+										Using the Crime Survey for England and Wales, 2013-2014: Unrestricted Access Teaching Dataset, assess the level of anti-social behaviour that the survey respondents experience in their neighbourhood by creating a summary statistic, using the ‘antisocx’ variable.. 
 									</p>
 								</div>
 							</section>
@@ -75,29 +75,26 @@
 						<!-- Two -->
 							<section id="two">
 								<div class="container">
-									<h3>Web Scraping Exercise</h3>
-									<p>I used Beautiful Soup to try and Web Scrap MacBook Prices and Specs from an online store. In addition, I attempted to write all this information into a CSV file.</p>
-								
+									<h3>Summary Statistic Exercise Using R</h3>
+									<p>This unit introduced me to the programming language R and R Studio for statistica analysis. The unit covered overview of R Studio including, packages, data frames, metrices and basic statistical calculations.</p>
+								<p>The first step of this exercise was to retrieve the crime stats data which was saved in a SPSS format and load it into R Studio.
+                                    Using the user guide that was attached to the dataset, I was able to match the numerical values to the corresponding labels in the dataframe. 
+                                </p>
 								<code>
-									<p>from bs4 import BeautifulSoup</p>
-									<p>import requests</p>
-									<p>import csv
-									
-									url = 'https://www.incredible.co.za/specials/apple-macbook-price-drop-promo'</p>
-									
-									<p>headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36"}
-									</p>
-									<p>r = requests.get(url, headers=headers)</p>
-									<p>soup1 = BeautifulSoup(r.content, 'html.parser')</p>
-									<p>	soup2 = BeautifulSoup(soup1.prettify(), 'html.parser')</p>
-									<p>laptops = soup2.find_all('div', class_='product-item-info')</p>
-									<p>for laptop in laptops:</p>
-										<p>with open('macbookpricesdataset1.text', 'w' , encoding='UTF8') as f:</p>
-											<p>title = soup2.find('strong',class_='product name product-item-name').text.replace('', '')</p>
-											<p>price = soup2.find('span',class_='price').text.replace('','')</p>
-									
-											<p>f.write(f"title: {title} \n")</p>
-											<p>f.write(f"price: {price} "</p></code>
+                                    <p> > csew1314teachingopen$wburgl<-factor(csew1314teachingopen$wburgl,levels=c(1,2,3,4,5,9),labels=c("Very Worried","Fairly Worried","Not Very Worried","Not at all worried","Not Applicable","Don't Know"))
+                                        </p>
+                                </code>
+                                <p>The above code converted the numerical values in the column that asked "How worried about having your home broken into?" to labels i.e "Very Worried, "Fairly Worried".
+                                    This was done for all relevant columns. 
+                                </p>
+                                <p>Upon completion of this exercise, I ran a summary code to view a complete summary of the dataframe. </p>
+                                <code>summary(csew1314teachingopen)</code>
+                                <p>The below image shows the summary of the crime stats data</p>
+                                <br>
+                                <br>
+
+                                <span class="image fit"><img src='https://i.postimg.cc/G3zbjdqx/Summaryof-Crime-Stats-in-R.jpg' border='0' alt='1562228200592'/>
+                                </span>
 								</div>
 							</section>
 									<!--<ul class="feature-icons">
@@ -114,8 +111,9 @@
 								<div class="container">
 									<h3>Learning Outcomes</h3>
 									
-									<li>Distinguish between and critically reflect on the solutions of various data analytics approaches which support the business decision-making process.</li>
-									<li>Apply and evaluate critically the various methods, tools, technologies and success factors applied to a data science project in order to develop an effective plan and delivery of solutions to a business problem</li>
+									<li>Present the Summary Statistics Using the "antisox" variable</li>
+									<span class="image fit"><img src='https://i.postimg.cc/XJqcrVJ7/Antisocx-summary-Stats.jpg' border='2' alt='1562228200592'/>
+                                    </span>
 									
 											
 										
@@ -127,13 +125,12 @@
 							<section id="four">
 								<div class="container">
 									<h3>Reflections</h3>
-									<p>On the first attempt, the code worked however, once the prices and description of the Macbooks were written to the CSV file they contained HTML tags. On closer inspection of the code, I realized what the issue was I was calling the same parameters twice. 
-										Web scraping is a useful skill to learn and apply in your research activities. Often as a Data Scientist, you will not have access to all the data you need to analyze. Thus, web scrapping becomes the most accessible way of sourcing data.
-										It’s also important to consider data protection measures once the data has been obtained. It’s important to read through a website’s Terms and Conditions to understand how to use the data legally (Khan,2020). Khan (2020) also mentions that a user may be potentially blocked from a site if they are downloading data at a rapid rate. 
+									<p>The first part of the exercise required setting up and managing the dataframe and making it more understandable.Converting the numerical values 
+                                        that were captured in the SPSS file to the corresponding labels. After which, the dataframe became more user friendly and more logical to read. 
+                                    </p>
 										
 										<p><b>References</b> </p>
-										1.	Khan, S. (2020). Web Scraping with Python. Available From: https://medium.com/insights-school/web-scrapping-with-python-d49020793090 
-										Accessed [14 May 2022]
+										1.
 										</p>
 									
 									
